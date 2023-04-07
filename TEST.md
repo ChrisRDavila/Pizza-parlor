@@ -73,6 +73,15 @@ let testPizza = newPizza(0, 0, 0...)
 testPizza; Pizza ... {sauce:
 id: 0, name: "red", value: 0}...
 
+# Test 10:
+Adding Mapping to each property to associate my array properties with an id and value which should held later when developing a cost(). moving on to meat toppings  
+## Code:
+let testPizza = newPizza(0, 0, 0, 0...)
+## Expected Output:
+testPizza; Pizza ... {meatTop:
+id: 0, name: "none", value: 0}...
+
+
 
 ## Test:
 ## Code:
