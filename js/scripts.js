@@ -5,13 +5,19 @@ const sizes = [
   {id: 1, name: "medium", value: 13},
   {id: 2, name: "large", value: 16}
 ];
-let ids = sizes.map( (item) => item.id);
-let names = sizes.map((item) => item.name);
-let values = sizes.map((item) => item.value);
+let sizeID = sizes.map((item) => item.id);
+let sizeNames = sizes.map((item) => item.name);
+let sizeValues = sizes.map((item) => item.value);
 
 const styles = [
-  {id: 0, name: "regular",
-   "deep-dish", "thin-crust"]
+  {id: 0, name: "regular", value: 0},
+  {id: 1, name: "deep-dish", value: 2},
+  {id: 2, name: "thin-crust", value: 1}
+]
+let styleID = styles.map((item) => item.id);
+let styleName = styles.map((item) => item.name);
+let styleValues = styles.map((item) => item.value);
+
 const sauces = ["red", "white", "BBQ"];
 const meats = ["none", "pepperoni", "sausage"];
 const veggies = ["none", "olive", "bell-pepper"];
@@ -48,7 +54,7 @@ Pizza.prototype.chooseVeg = function(vegTop) {
 
 //}
  
-let testPizza = new Pizza(0, 0, 0, [1, 2], 0);
+let testPizza = new Pizza(0, 0, 0, 0, 0);
 
 //Business Logic for Map properties
 
