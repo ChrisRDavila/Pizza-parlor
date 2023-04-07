@@ -24,13 +24,14 @@ chooseStyle["regular", "deep-dish", "thin-crust"]
 ## Expected Output:
 Pizza {size:small, style:regular...}
 
+
 ## Test:
-Should allow to specify a type of sauce from array of options for new Pizza Object
+Should allow to specify a type of meat topping from array of options for new Pizza Object
 ## Code:
-let testPizza = new Pizza(0, 0, 0, "pepperoni", "olive");
-suaceType["red", "white", "BBQ"]
+let testPizza = new Pizza(0, 0, 0, 0, "olive");
+suaceType["none", "pepperoni", "sausage"]
 ## Expected Output:
-Pizza {size:small, style:regular, sauce:red...}
+Pizza {size:small, style:regular, sauce:red, meatTop:none...}
 
 
 ## Test:
