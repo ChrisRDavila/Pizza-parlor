@@ -3,10 +3,14 @@
 const sizes = ["small", "medium", "large"];
 const styles = ["regular", "deep-dish", "thin-crust"]
 const sauces = ["red", "white", "BBQ"];
-const meats = new Map();
-meats.set(0, "none");
-meats.set(1, "pepperoni");
-meats.set(2, "sausage");
+let meats = [
+  {id: 0, value: "none"},
+  {id: 1, value: "pepperoni"},
+  {id: 2, value: "sausage"}
+]
+  let ids = meats.map((item)=>item.id);
+  let values = meats.map((item)=>item.value); 
+
 
 
 function Pizza(size, style, sauce, meatTop, vegTop, crust) {
@@ -32,6 +36,4 @@ Pizza.prototype.chooseMeat = function(meatTop) {
   return meats[meatTop];
 }
  
-let testPizza = new Pizza(0, 0, 0, [1][2],"olives");
-let testPizza = new Pizza(0, 0, 0, meatCombo, "olive");
- or 
+let testPizza = new Pizza(0, 0, 0, 0,"olives");
