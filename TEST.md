@@ -10,14 +10,18 @@ let testPizza = new Pizza("large", "deep-dish", "red-sauce", "pepperoni", "olive
 ## Test:
 should specify a size for our Pizza with options as postions in an array
 ## Code:
-Pizza()
-sizeChoose(0)
+let testPizza = new Pizza(0, "detroit", "red", "pepperoni", "olive") 
+sizeChoose(size)
 ## Expected Output:
-small size pizza
+testPizza;
+Pizza {size:"small"...}
 
 ## Test:
-## Code:
+Should specify a style for a Pizza from an array of options
+## Code: 
+et testPizza = new Pizza(0, 0, "red", "pepperoni", "olive") 
 ## Expected Output:
+Pizza {size:small, style:regular...}
 
 ## Test:
 ## Code:

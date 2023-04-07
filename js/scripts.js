@@ -1,12 +1,20 @@
 //Business Logic for Pizza-----------
-function Pizza(size, style, sauce, meatTop,vegTop) {
-this.size = size;
+
+const sizes = ["small", "medium", "large"];
+
+function Pizza(size, style, sauce, meatTop, vegTop) {
+this.size = this.chooseSize(size);
 this.style = style;
 this.sauce = sauce;
 this.meatTop = meatTop;
 this.vegTop = vegTop;
 }
 
-//Pizza.prototype.sizeChoose = function() {
-//  this.size = [small,medium, large];
-//}
+
+
+
+Pizza.prototype.chooseSize = function(size) {
+  return sizes[size]; 
+}
+
+let testPizza = new Pizza(0, "detroit", "red", "pepperoini", "olive");
