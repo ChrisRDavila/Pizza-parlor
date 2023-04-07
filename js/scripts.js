@@ -9,8 +9,9 @@ let ids = sizes.map( (item) => item.id);
 let names = sizes.map((item) => item.name);
 let values = sizes.map((item) => item.value);
 
-const styles = 
-["regular", "deep-dish", "thin-crust"]
+const styles = [
+  {id: 0, name: "regular",
+   "deep-dish", "thin-crust"]
 const sauces = ["red", "white", "BBQ"];
 const meats = ["none", "pepperoni", "sausage"];
 const veggies = ["none", "olive", "bell-pepper"];
