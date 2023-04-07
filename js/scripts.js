@@ -18,7 +18,15 @@ let styleID = styles.map((item) => item.id);
 let styleName = styles.map((item) => item.name);
 let styleValues = styles.map((item) => item.value);
 
-const sauces = ["red", "white", "BBQ"];
+const sauces = [
+  {id: 0, name: "red", value: 0},
+  {id: 1, name: "white", value: 1},
+  {id: 2, name: "BBQ", value: 1},
+]
+let suaceID = sauces.map((item) => item.id);
+let sauceName = sauces.map((item) => item.name);
+let sauceValue = sauces.map((item) => item.value);
+
 const meats = ["none", "pepperoni", "sausage"];
 const veggies = ["none", "olive", "bell-pepper"];
 
