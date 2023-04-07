@@ -7,4 +7,6 @@ this.meatTop = meatTop;
 this.vegTop = vegTop;
 }
 
-
+//Pizza.prototype.sizeChoose = function() {
+//  this.size = [small,medium, large];
+//}
