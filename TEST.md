@@ -41,6 +41,24 @@ suaceType["none", "olive", "bell-pepper"]
 ## Expected Output:
 Pizza {size:small, style:regular, sauce:red, meatTop:none...}
 
+## Test:Adding Mapping to each propery to associate 
+## Code:
+## Expected Output:
+
+## Test:
+## Code:
+## Expected Output:
+
+## Test:
+## Code:
+## Expected Output:
+
+## Test:
+## Code:
+## Expected Output:
+
+
+
 <!--## Test:
 Should allow to specify multiple types of meat topping from array of options for new Pizza Object
 ## Code:
@@ -48,25 +66,5 @@ let testPizza = new Pizza(0, 0, 0, [1,2], "olive");
 suaceType["none", "pepperoni", "sausage"]
 ## Expected Output:
 Pizza {size:small, style:regular, sauce:red, meatTop:sausage, pepperoni...}-->
-
-
-## Test:
-## Code:
-## Expected Output:
-
-## Test:
-## Code:
-## Expected Output:
-
-## Test:
-## Code:
-## Expected Output:
-
-## Test:
-## Code:
-## Expected Output:
-
-
-
 
 
