@@ -3,12 +3,13 @@
 const sizes = ["small", "medium", "large"];
 const styles = ["regular", "deep-dish", "thin-crust"]
 const sauces = ["red", "white", "BBQ"];
+const meats = ["none", "pepperoni","sausage"];
 
 function Pizza(size, style, sauce, meatTop, vegTop, crust) {
 this.size = this.chooseSize(size);
 this.style = this.chooseStyle(style);
 this.sauce = this.chooseSauce(sauce);
-this.meatTop = meatTop;
+this.meatTop = this.chooseMeat(meatTop);
 this.vegTop = vegTop;
 this.crust = crust;
 }
@@ -23,5 +24,8 @@ Pizza.prototype.chooseStyle = function(style) {
 Pizza.prototype.chooseSauce = function(sauce) {
   return sauces[sauce];
 }
+Pizza.prototype.chooseMeat = function(meatTop) {
+  return meats[meatTop];
+}
 
-let testPizza = new Pizza(0, 0, 0, "pepperoini", "olive");
+let testPizza = new Pizza(0, 0, 0, 0, "olive");
