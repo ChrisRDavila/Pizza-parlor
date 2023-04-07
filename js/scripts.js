@@ -1,13 +1,14 @@
 //Business Logic for Pizza-----------
 
-const sizes = [
-  {id: 1, name: "small", value: 10}, 
-  {id: 2, name: "medium", value: 13},
-  {id: 3, name: "large", value: 16}
-];
-let ids = sizes.map( (item) => item.id);
-let names = sizes.map((item) => item.name);
-let values = sizes.map((item) => item.value);
+//const sizes = [
+//  {id: 1, name: "small", value: 10}, 
+//  {id: 2, name: "medium", value: 13},
+//  {id: 3, name: "large", value: 16}
+//];
+//let ids = sizes.map( (item) => item.id);
+//let names = sizes.map((item) => item.name);
+//let values = sizes.map((item) => item.value);
+
 const styles = ["regular", "deep-dish", "thin-crust"]
 const sauces = ["red", "white", "BBQ"];
 const meats = ["none", "pepperoni", "sausage"];
@@ -49,8 +50,19 @@ let testPizza = new Pizza(0, 0, 0, [1, 2], 0);
 
 //Business Logic for Map properties
 
-const mapSizes = new Map([
-  [id, 1],
+function PropertyMap = (id, name, value) {
+  this.id = id;
+  this.name = name;
+  this.value = value;
+}
+
+const SmallSizeMap = new Map([
+  [id, 0],
   ["name", "small"],
   [value, 10]
+])
+const MediumSizeMap =  new Map([
+  [id, 1],
+  ["name", "small"],
+
 ])
