@@ -41,9 +41,13 @@ suaceType["none", "olive", "bell-pepper"]
 ## Expected Output:
 Pizza {size:small, style:regular, sauce:red, meatTop:none...}
 
-## Test:Adding Mapping to each propery to associate 
+## Test:
+Adding Mapping to each property to associate my array properties with an id and value which should held later when developing a cost()  
 ## Code:
+let testPizza = newPizza(0.....)
 ## Expected Output:
+Pizza {size:
+id: 0, name: "small", value: 10}
 
 ## Test:
 ## Code:

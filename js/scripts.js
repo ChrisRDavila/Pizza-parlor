@@ -1,9 +1,9 @@
 //Business Logic for Pizza-----------
 
 const sizes = [
-  {id: 1, name: "small", value: 10}, 
-  {id: 2, name: "medium", value: 13},
-  {id: 3, name: "large", value: 16}
+  {id: 0, name: "small", value: 10}, 
+  {id: 1, name: "medium", value: 13},
+  {id: 2, name: "large", value: 16}
 ];
 let ids = sizes.map( (item) => item.id);
 let names = sizes.map((item) => item.name);
