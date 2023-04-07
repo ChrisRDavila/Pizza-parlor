@@ -25,7 +25,13 @@ Pizza.prototype.chooseSauce = function(sauce) {
   return sauces[sauce];
 }
 Pizza.prototype.chooseMeat = function(meatTop) {
-  return meats[meatTop];
+  let meatOne = meats[meatTop];
+  let meatTwo = meats[meatTop];
+  meatcombo = meatOne + " " + meatTwo; 
 }
 
-let testPizza = new Pizza(0, 0, 0, 0, "olive");
+let testPizza = new Pizza(0, 0, 0, meatcombo, "olive");
+
+or
+
+let testPizza = new Pizza(0, 0, 0, [1,2], "olive");
