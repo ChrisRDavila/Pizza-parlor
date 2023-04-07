@@ -54,7 +54,7 @@ Adding Mapping to each property to associate my array properties with an id,name
 ## Code:
 let testPizza = newPizza(0.....)
 ## Expected Output:
-Pizza {size:
+testPizza; Pizza... {size:
 id: 0, name: "small", value: 10}
 
 # Test 8:
@@ -62,8 +62,16 @@ Adding Mapping to each property to associate my array properties with an id and 
 ## Code:
 let testPizza = newPizza(0, 0...)
 ## Expected Output:
-Pizza {style:
-id: 0, name: "regular", value: 0}
+testPizza; Pizza ... {style:
+id: 0, name: "regular", value: 0}...
+
+# Test 9:
+Adding Mapping to each property to associate my array properties with an id and value which should held later when developing a cost(). moving on to sauce  
+## Code:
+let testPizza = newPizza(0, 0, 0...)
+## Expected Output:
+testPizza; Pizza ... {sauce:
+id: 0, name: "red", value: 0}...
 
 
 ## Test:
