@@ -11,7 +11,7 @@ let testPizza = new Pizza("large", "deep-dish", "red-sauce", "pepperoni", "olive
 should specify a size for our Pizza with options as postions in an array
 ## Code:
 let testPizza = new Pizza(0, "detroit", "red", "pepperoni", "olive") 
-sizeChoose(size)
+sizeChoose["small", "medium", "large"]
 ## Expected Output:
 testPizza;
 Pizza {size:"small"...}
@@ -19,13 +19,19 @@ Pizza {size:"small"...}
 ## Test:
 Should specify a style for a Pizza from an array of options
 ## Code: 
-et testPizza = new Pizza(0, 0, "red", "pepperoni", "olive") 
+let testPizza = new Pizza(0, 0, "red", "pepperoni", "olive"); 
+chooseStyle["regular", "deep-dish", "thin-crust"]
 ## Expected Output:
 Pizza {size:small, style:regular...}
 
 ## Test:
+Should allow to specify a type of sauce from array of options for new Pizza Object
 ## Code:
+let testPizza = new Pizza(0, 0, 0, "pepperoni", "olive");
+suaceType["red", "white", "BBQ"]
 ## Expected Output:
+Pizza {size:small, style:regular, sauce:red...}
+
 
 ## Test:
 ## Code:
