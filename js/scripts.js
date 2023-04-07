@@ -27,7 +27,16 @@ let suaceID = sauces.map((item) => item.id);
 let sauceName = sauces.map((item) => item.name);
 let sauceValue = sauces.map((item) => item.value);
 
-const meats = ["none", "pepperoni", "sausage"];
+const meats = [
+  {id: 0, name: "none", value: 0},
+  {id: 1, name: "pepperoni", value: 1},
+  {id: 2, name: "sausage", value: 1}
+]
+let meatID = meats.map((item) => item.id);
+let meatName = meats.map((item) => item.name);
+let meatValue = meats.map((item) => item.vlaue);
+
+
 const veggies = ["none", "olive", "bell-pepper"];
 
 
