@@ -125,7 +125,6 @@ testOrder;
 Delivery {nickname: 'jeff', address: '77 E Grand', totalPrice: '25', timeEst: '30 min'}
 
 ## Test:
-
 ## Code:
 ## Expected Output:
 
@@ -133,14 +132,5 @@ Delivery {nickname: 'jeff', address: '77 E Grand', totalPrice: '25', timeEst: '
 ## Code:
 ## Expected Output:
 
-
-
-<!--## Test:
-Should allow to specify multiple types of meat topping from array of options for new Pizza Object
-## Code:
-let testPizza = new Pizza(0, 0, 0, [1,2], "olive");
-suaceType["none", "pepperoni", "sausage"]
-## Expected Output:
-Pizza {size:small, style:regular, sauce:red, meatTop:sausage, pepperoni...}-->
 
 
