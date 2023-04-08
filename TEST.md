@@ -115,11 +115,11 @@ let testPizza  = new Pizza("small")
 testPizza; Pizza {size:small, price: 10}
 
 ## Test:
-test will add function to determine style and add cost if style add to price
+test will allow to add style and sauce type to pizza
 ## Code:
-let testPizza  = new Pizza("small", "thin-crust")
+let testPizza = new Pizza("small", "regular", "red")
 ## Expected Output:
-testPizza; Pizza {size:"small", style:"thin-crust", price: 11}
+testPizza; Pizza {size:"small", style:"regular, sauce:red}
 
 
 ## Test:

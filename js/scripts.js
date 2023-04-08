@@ -56,59 +56,52 @@
 
 function Pizza(size, style, sauce, meatTop, vegTop, side, deliveryOption) {
 this.size = size;
-//this.style = this.chooseStyle(style);
+this.style = style;
 //this.sauce = this.chooseSauce(sauce);
 //this.meatTop = this.chooseMeat(meatTop);
 //this.vegTop = this.chooseVeg(vegTop);
 //this.side = this.chooseSide(side);
-this.price = this.chooseSize(size);
+this.price = this.getCost();
 //this.deliveryOption = deliveryOption
 }
 
-Pizza.prototype.chooseSize = function() {
-  if (this.size === "small") {
-    this.price = 10;
-  } 
-  else if (this.size === "medium") {
-    this.price = 13
-  } 
-  else {
-    this.price = 16
-  } 
-return this.price;
+Pizza.prototype.cost = function() {
+  let cost = 10;
+  if (this.size === "medium") {
+    cost += 5;
+  } else if (this.size === "large") {
+    cost += 10
+  }
 }
-let testPizza = new Pizza("small");
+let testPizza = new Pizza("thin-crust");
+// Pizza.prototype.chooseSauce = function(sauce) {
+//   return sauces[sauce];
+// }
+// Pizza.prototype.chooseMeat = function(meatTop) {
+//   return meats[meatTop];
+// }
+// Pizza.prototype.chooseVeg = function(vegTop) {
+//   return veggies[vegTop];
+// }
+// Pizza.prototype.chooseSide = function(side) {
+//   return sides[side];
+//}
 
-Pizza.prototype.chooseStyle = function(style) {
-  return styles[style];
-}
-Pizza.prototype.chooseSauce = function(sauce) {
-  return sauces[sauce];
-}
-Pizza.prototype.chooseMeat = function(meatTop) {
-  return meats[meatTop];
-}
-Pizza.prototype.chooseVeg = function(vegTop) {
-  return veggies[vegTop];
-}
-Pizza.prototype.chooseSide = function(side) {
-  return sides[side];
-}
-Pizza.prototype.cost = function(){
-  let pizzaPrice = this.size.value + this.style.value + this.sauce.value + this.meatTop.value + this.vegTop.value + this.side.value;
-  if (this.deliveryOption === true){
-    pizzaPrice
-  }
-  return pizzaPrice 
-}
-Pizza.prototype.addCost = function(deliveryOption){
-  if(deliveryOption === true) {
-    //remove.hidden
-    this.cost.price += 5;
-  } else {
-  return this.cost.price;
-  }
-}
+// Pizza.prototype.cost = function(){
+//   let pizzaPrice = this.size.value + this.style.value + this.sauce.value + this.meatTop.value + this.vegTop.value + this.side.value;
+//   if (this.deliveryOption === true){
+//     pizzaPrice
+//   }
+//   return pizzaPrice 
+// }
+// Pizza.prototype.addCost = function(deliveryOption){
+//   if(deliveryOption === true) {
+//     //remove.hidden
+//     this.cost.price += 5;
+//   } else {
+//   return this.cost.price;
+//   }
+// }
  
 
 
