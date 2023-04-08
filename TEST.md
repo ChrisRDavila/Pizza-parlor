@@ -44,7 +44,7 @@ Pizza {size:small, style:regular, sauce:red, meatTop:none...}
 ## Test 6:
 Adding Mapping to each property to associate my array properties with an id and value which should held later when developing a cost()  
 ## Code:
-let testPizza = newPizza(0.....)
+let testPizza = new Pizza(0.....)
 ## Expected Output:
 Pizza {size:
 id: 0, name: "small", value: 10}
@@ -52,7 +52,7 @@ id: 0, name: "small", value: 10}
 # Test 7:
 Adding Mapping to each property to associate my array properties with an id,name and value which should held later when developing a cost(), starting with size property 
 ## Code:
-let testPizza = newPizza(0.....)
+let testPizza = new Pizza(0.....)
 ## Expected Output:
 testPizza; Pizza... {size:
 id: 0, name: "small", value: 10}
@@ -60,7 +60,7 @@ id: 0, name: "small", value: 10}
 # Test 8:
 Adding Mapping to each property to associate my array properties with an id and value which should held later when developing a cost(). moving on to styles  
 ## Code:
-let testPizza = newPizza(0, 0...)
+let testPizza = new Pizza(0, 0...)
 ## Expected Output:
 testPizza; Pizza ... {style:
 id: 0, name: "regular", value: 0}...
@@ -68,7 +68,7 @@ id: 0, name: "regular", value: 0}...
 # Test 9:
 Adding Mapping to each property to associate my array properties with an id and value which should held later when developing a cost(). moving on to sauce  
 ## Code:
-let testPizza = newPizza(0, 0, 0...)
+let testPizza = new Pizza(0, 0, 0...)
 ## Expected Output:
 testPizza; Pizza ... {sauce:
 id: 0, name: "red", value: 0}...
@@ -76,7 +76,7 @@ id: 0, name: "red", value: 0}...
 # Test 10:
 Adding Mapping to each property to associate my array properties with an id and value which should held later when developing a cost(). moving on to meat toppings  
 ## Code:
-let testPizza = newPizza(0, 0, 0, 0...)
+let testPizza = new Pizza(0, 0, 0, 0...)
 ## Expected Output:
 testPizza; Pizza ... {meatTop:
 id: 0, name: "none", value: 0}...
@@ -84,17 +84,18 @@ id: 0, name: "none", value: 0}...
 # Test 11:
 Adding Mapping to each property to associate my array properties with an id and value which should held later when developing a cost(). moving on to veggie toppings  
 ## Code:
-let testPizza = newPizza(0, 0, 0, 0, 0)
+let testPizza = new Pizza(0, 0, 0, 0, 0)
 ## Expected Output:
 testPizza; Pizza ... {vegTop:
 id: 0, name: "none", value: 0}...
 
-
-
-
-## Test:
-## Code:
+## Test 12:
+will test if cost() adds values from properties assigned to a new Pizza() to give sum of all property values
+## Code: 
+let testPizza = new(0, 0, 0, 0, 0)
 ## Expected Output:
+testPizza, Pizza ... {price:
+pizzaPrice: 10}.....
 
 ## Test:
 ## Code:

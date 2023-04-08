@@ -74,8 +74,9 @@ Pizza.prototype.chooseVeg = function(vegTop) {
   return veggies[vegTop];
 }
 //Pizza.prototype.cost = function(){
-
-//}
+//  let pizzaPrice = size.value + style.value + suaceID.value + meatTop.value + vegTop.value;
+//  return pizzaPrice 
+}
  
 let testPizza = new Pizza(0, 0, 0, 0, 0);
 
