@@ -119,13 +119,15 @@ test will allow to add style and sauce type to pizza
 ## Code:
 let testPizza = new Pizza("small", "regular", "red")
 ## Expected Output:
-testPizza; Pizza {size:"small", style:"regular, sauce:red}
+testPizza; Pizza {size:"small", style:"regular, sauce:red, price: 10}
 
 
 ## Test:
+Add toppings that will add to cost and display with pizza
 ## Code:
+let testPizza = new Pizza("small", "regular", "red", ["pepperoni", "olive"])
 ## Expected Output:
-
+testPizza; Pizza {size:"small, styles:regular, sauce: red, toppings: ["pepproni", "olive"], price: 14}
 
 ## Test:
 ## Code:

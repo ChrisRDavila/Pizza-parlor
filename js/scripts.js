@@ -54,26 +54,26 @@
 // let sideName = sides.map((item) => item.name);
 // let sideValue = sides.map((item) => item.value);
 
-function Pizza(size, style, sauce, meatTop, vegTop, side, deliveryOption) {
+function Pizza(size, style, sauce, toppings, side, deliveryOption) {
 this.size = size;
 this.style = style;
-//this.sauce = this.chooseSauce(sauce);
-//this.meatTop = this.chooseMeat(meatTop);
-//this.vegTop = this.chooseVeg(vegTop);
+this.sauce = sauce;
+this.toppings = toppings;
 //this.side = this.chooseSide(side);
 this.price = this.getCost();
 //this.deliveryOption = deliveryOption
 }
 
-Pizza.prototype.cost = function() {
+Pizza.prototype.getCost = function() {
   let cost = 10;
   if (this.size === "medium") {
     cost += 5;
   } else if (this.size === "large") {
     cost += 10
-  }
+  } cost += this.toppings.length * 2;
+  return cost;
 }
-let testPizza = new Pizza("thin-crust");
+let testPizza = new Pizza("small", "regular", "red", ["pepperoni", "olive"]);
 // Pizza.prototype.chooseSauce = function(sauce) {
 //   return sauces[sauce];
 // }
