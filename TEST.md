@@ -105,6 +105,14 @@ sides["none", "pepsi", "ranch-dressing"]
 ## Expected Output:
 testPizza; Pizza {side: id:0, name: "Pepsi", value: 1} 
 
+## Test:
+if value of true for delivery, add 5 to pizzaPrice
+## Code:
+let testPizza = new Pizza(0, 1, 1, 1 , 1, 1, true);
+## Expected Output:
+testPizza; Pizza...{price: pizzaPrice : 21}
+
+
 <!-- ## Test:
 Should allow to specify multiple types of meat topping or other toppings from array of options for new Pizza Object
 ## Code:
@@ -113,7 +121,7 @@ suaceType["none", "pepperoni", "sausage"]
 ## Expected Output:
 Pizza {size:small, style:regular, sauce:red, meatTop:sausage, pepperoni...}-->
 
-## Describe
+<!-- ## Describe
 Delivery()
 
 ## Test 1:
@@ -122,7 +130,7 @@ Will give properties for delivery info when given strings for properties in inpu
 let testOrder = new Delivery("jeff", "77 E Grand", "25", "30 min");
 ## Expected Output:
 testOrder;
-Delivery {nickname: 'jeff', address: '77 E Grand', totalPrice: '25', timeEst: '30 min'}
+Delivery {nickname: 'jeff', address: '77 E Grand', totalPrice: '25', timeEst: '30 min'} -->
 
 ## Test:
 ## Code:

@@ -56,7 +56,7 @@ let sideValue = sides.map((item) => item.value);
 
 
 
-function Pizza(size, style, sauce, meatTop, vegTop, side, price) {
+function Pizza(size, style, sauce, meatTop, vegTop, side, price, deliveryOption) {
 this.size = this.chooseSize(size);
 this.style = this.chooseStyle(style);
 this.sauce = this.chooseSauce(sauce);
@@ -64,6 +64,7 @@ this.meatTop = this.chooseMeat(meatTop);
 this.vegTop = this.chooseVeg(vegTop);
 this.side = this.chooseSide(side);
 this.price = this.cost(price);
+this.deliveryOption = this.addCost(deliveryOption)
 }
 
 Pizza.prototype.chooseSize = function(size) {
@@ -89,16 +90,26 @@ Pizza.prototype.cost = function(){
   let pizzaPrice = this.size.value + this.style.value + this.sauce.value + this.meatTop.value + this.vegTop.value + this.side.value;
   return pizzaPrice 
 }
+// Pizza.prototype.addCost = function(){
+//   if(this.deliveryOption === true) {
+//     //remove.hidden
+//     pizzaPrice.value += 5;
+//   }
+//   return pizzaPrice
+// }
  
-let testPizza = new Pizza(0, 1, 1, [1, 2], 1, 1);
+let testPizza = new Pizza(0, 1, 1, 1 , 1, 1, true);
 
 //Business Logic for Delivery
 
-function Delivery(nickname, address, totalPrice, timeEst){
-  this.nickname = nickname;
-  this.address = address;
-  this.totalPrice = totalPrice;
-  this.timeEst = timeEst;
-}
-let testOrder = new Delivery("jeff", "77 E Grand", "25", "30 min");
+// function Delivery(nickname, address, deliverPrice, timeEst){
+//   this.nickname = nickname;
+//   this.address = address;
+//   this.deliverPrice = deliverPrice;
+//   this.timeEst = timeEst;
+// }
+// Delivery.prototype.totalPrice = function(){
+//   if 
+// }
+// let testOrder = new Delivery("jeff", "77 E Grand", "25", "30 min");
 
