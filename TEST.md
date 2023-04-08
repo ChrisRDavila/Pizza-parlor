@@ -146,8 +146,11 @@ test Pizza; Pizza {.....sides:["soda", "brownie"], delivery: true,  price: 21}
 
 
 ## Test:
+turn output cost into cash value element
 ## Code:
+`$${cost}.00`
 ## Expected Output:
+test Pizza; Pizza {.....sides:["soda", "brownie"], delivery: true,  price: "21.00"}
 
 
 ## Test:
