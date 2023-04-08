@@ -23,7 +23,7 @@ const sauces = [
   {id: 1, name: "white", value: 1},
   {id: 2, name: "BBQ", value: 1},
 ]
-let suaceID = sauces.map((item) => item.id);
+let sauceID = sauces.map((item) => item.id);
 let sauceName = sauces.map((item) => item.name);
 let sauceValue = sauces.map((item) => item.value);
 
@@ -53,7 +53,7 @@ this.style = this.chooseStyle(style);
 this.sauce = this.chooseSauce(sauce);
 this.meatTop = this.chooseMeat(meatTop);
 this.vegTop = this.chooseVeg(vegTop);
-//this.price = this.cost(price);
+this.price = this.cost(price);
 }
 
 Pizza.prototype.chooseSize = function(size) {
@@ -73,12 +73,12 @@ Pizza.prototype.chooseMeat = function(meatTop) {
 Pizza.prototype.chooseVeg = function(vegTop) {
   return veggies[vegTop];
 }
-//Pizza.prototype.cost = function(){
-//  let pizzaPrice = size.value + style.value + suaceID.value + meatTop.value + vegTop.value;
-//  return pizzaPrice 
+Pizza.prototype.cost = function(){
+  let pizzaPrice = this.size.value + this.style.value + this.sauce.value + this.meatTop.value + this.vegTop.value;
+  return pizzaPrice 
 }
  
-let testPizza = new Pizza(0, 0, 0, 0, 0);
+let testPizza = new Pizza(0, 1, 1, 1, 1);
 
 //Business Logic for Map properties
 
