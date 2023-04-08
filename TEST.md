@@ -105,12 +105,16 @@ sides["none", "pepsi", "ranch-dressing"]
 ## Expected Output:
 testPizza; Pizza {side: id:0, name: "Pepsi", value: 1} 
 
+---------------------------------------------
+
 ## Test:
-if value of true for delivery, add 5 to pizzaPrice
+size function will determine cost of pizza based on string
 ## Code:
-let testPizza = new Pizza(0, 1, 1, 1 , 1, 1, true);
+let testPizza  = new Pizza("small")
 ## Expected Output:
-testPizza; Pizza...{price: pizzaPrice : 21}
+testPizza {size:small, price: 10}
+
+## Test:
 
 
 <!-- ## Test:
