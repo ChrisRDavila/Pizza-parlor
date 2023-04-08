@@ -137,8 +137,13 @@ let testPizza = newPizza(....["soda", "brownie"])
 test Pizza; Pizza {.....sides:["soda", "brownie"], price: 16}
 
 ## Test:
+add option to deliver and delivery cost
 ## Code:
+let testPizza = newPizza(....,true)
 ## Expected Output:
+test Pizza; Pizza {.....sides:["soda", "brownie"], delivery: true,  price: 21}
+
+
 
 ## Test:
 ## Code:
