@@ -94,8 +94,16 @@ will test if cost() adds values from properties assigned to a new Pizza() to giv
 ## Code: 
 let testPizza = new(0, 0, 0, 0, 0)
 ## Expected Output:
-testPizza, Pizza ... {price:
+testPizza; Pizza ... {price:
 pizzaPrice: 10}.....
+
+## Test 13:
+Should allow to specify a type of side from array of options for new Pizza Object
+## Code:
+let testPizza = new Pizza(0, 0, 0, 0, 1, 0);
+sides["none", "pepsi", "ranch-dressing"]
+## Expected Output:
+testPizza; Pizza {side: id:0, name: "Pepsi", value: 1}
 
 ## Test:
 ## Code:

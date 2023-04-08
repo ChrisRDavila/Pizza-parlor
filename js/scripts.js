@@ -47,12 +47,13 @@ let vegValue = veggies.map((item) => item.value);
 
 
 
-function Pizza(size, style, sauce, meatTop, vegTop, price) {
+function Pizza(size, style, sauce, meatTop, vegTop, sides, price) {
 this.size = this.chooseSize(size);
 this.style = this.chooseStyle(style);
 this.sauce = this.chooseSauce(sauce);
 this.meatTop = this.chooseMeat(meatTop);
 this.vegTop = this.chooseVeg(vegTop);
+//this.sides = this.chooseSide(sides);
 this.price = this.cost(price);
 }
 
@@ -80,20 +81,10 @@ Pizza.prototype.cost = function(){
  
 let testPizza = new Pizza(0, 1, 1, 1, 1);
 
-//Business Logic for Map properties
+//Business Logic for Delivery
 
-//function PropertyMap(id, name, value) {
-//  this.id = id;
-//  this.name = name;
-//  this.value = value;
-//} 
-//const SmallSizeMap = new PropertyMap([
-//  [id, 0],
-//  ["name", "small"],
-//  [value, 10]
-//])
-//const MediumSizeMap =  new Map([
-//  [id, 1],
-//  ["name", "small"],
-//  [value, 13]
-//])
+//function Delivery(nickname, address, totPrice, timeEst){
+  this.nickname = nickname;
+
+//}
+
