@@ -130,6 +130,17 @@ let testPizza = new Pizza("small", "regular", "red", ["pepperoni", "olive"])
 testPizza; Pizza {size:"small, styles:regular, sauce: red, toppings: ["pepproni", "olive"], price: 14}
 
 ## Test:
+Add sides to new Pizza and cost of sides
+## Code:
+let testPizza = newPizza(....["soda", "brownie"])
+## Expected Output:
+test Pizza; Pizza {.....sides:["soda", "brownie"], price: 16}
+
+## Test:
+## Code:
+## Expected Output:
+
+## Test:
 ## Code:
 ## Expected Output:
 
