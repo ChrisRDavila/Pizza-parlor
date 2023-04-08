@@ -54,8 +54,6 @@ let sideID = sides.map((item) => item.id);
 let sideName = sides.map((item) => item.name);
 let sideValue = sides.map((item) => item.value);
 
-
-
 function Pizza(size, style, sauce, meatTop, vegTop, side, price, deliveryOption) {
 this.size = this.chooseSize(size);
 this.style = this.chooseStyle(style);
@@ -88,14 +86,15 @@ Pizza.prototype.chooseSide = function(side) {
 }
 Pizza.prototype.cost = function(){
   let pizzaPrice = this.size.value + this.style.value + this.sauce.value + this.meatTop.value + this.vegTop.value + this.side.value;
-  return this.pizzaPrice 
+  return pizzaPrice 
 }
-Pizza.prototype.addCost = function(){
-  if(this.delivery === true) {
+Pizza.prototype.addCost = function(deliveryOption){
+  if(deliveryOption === true) {
     //remove.hidden
-    pizzaPrice += 5;
+    this.cost.price += 5;
+  } else {
+  return this.cost.price;
   }
-  return this.pizzaPrice
 }
  
 let testPizza = new Pizza(0, 1, 1, 1 , 1, 1, true);
