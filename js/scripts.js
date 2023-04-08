@@ -14,29 +14,19 @@ Pizza.prototype.getCost = function() {
   let cost = 10;
   this.delivery = [Boolean];
   if (this.size === "medium") {
-    cost += 5;
+    cost += 3;
   } else if (this.size === "large") {
-    cost += 10
+    cost += 6
   } 
   cost += this.toppings.length * 2;
   cost += this.sides.length;
   if(this.delivery) {
     cost += 5
   }
-  return cost;
+  return `$${cost}.00`;
 }
 let testPizza = new Pizza("small", "regular", "red", ["pepperoni", "olive"], ["soda", "brownie"], true);
 
-//Business Logic for Delivery
+//UI Logic
 
-// function Delivery(nickname, address, deliverPrice, timeEst){
-//   this.nickname = nickname;
-//   this.address = address;
-//   this.deliverPrice = deliverPrice;
-//   this.timeEst = timeEst;
-// }
-// Delivery.prototype.totalPrice = function(){
-//   if 
-// }
-// let testOrder = new Delivery("jeff", "77 E Grand", "25", "30 min");
 
