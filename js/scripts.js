@@ -77,7 +77,6 @@ Pizza.prototype.chooseSauce = function(sauce) {
   return sauces[sauce];
 }
 Pizza.prototype.chooseMeat = function(meatTop) {
-  //meatTop = [meats, meats];
   return meats[meatTop];
 }
 Pizza.prototype.chooseVeg = function(vegTop) {

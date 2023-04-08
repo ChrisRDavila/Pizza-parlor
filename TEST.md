@@ -1,7 +1,7 @@
 ## Describe: 
 Pizza()
 ## Test 1:
-Will give build properties of pizza when strings for properties input
+Will build properties of pizza when strings for properties are input
 ## Code:
 let testPizza = new Pizza("large", "deep-dish", "red-sauce", "pepperoni", "olive")
 ## Expected Output:
@@ -103,9 +103,28 @@ Should allow to specify a type of side from array of options for new Pizza Objec
 let testPizza = new Pizza(0, 0, 0, 0, 1, 0);
 sides["none", "pepsi", "ranch-dressing"]
 ## Expected Output:
-testPizza; Pizza {side: id:0, name: "Pepsi", value: 1}
+testPizza; Pizza {side: id:0, name: "Pepsi", value: 1} 
 
 ## Test:
+Should allow to specify multiple types of meat topping or other toppings from array of options for new Pizza Object
+## Code:
+let testPizza = new Pizza(0, 0, 0, [1, 2],0, 0);
+suaceType["none", "pepperoni", "sausage"]
+## Expected Output:
+Pizza {size:small, style:regular, sauce:red, meatTop:sausage, pepperoni...}-->
+
+## Describe
+Delivery()
+
+## Test 1:
+Will give properties for delivery info when given strings for properties in input
+## Code:
+let testPizza = new Pizza("large", "deep-dish", "red-sauce", "pepperoni", "olive")
+## Expected Output:
+>testPizza; {size: "large", style: "deep-dish, sauce: "red-sauce", meatTop: "pepperoni, vegTop: "olive"}
+
+## Test:
+
 ## Code:
 ## Expected Output:
 
