@@ -36,8 +36,14 @@ let meatID = meats.map((item) => item.id);
 let meatName = meats.map((item) => item.name);
 let meatValue = meats.map((item) => item.vlaue);
 
-
-const veggies = ["none", "olive", "bell-pepper"];
+const veggies = [
+  {id: 0, name: "none", value: 0},
+  {id: 1, name: "olive", value: 1},
+  {id: 2, name: "bell-pepper", value: 1}
+]
+let vegID = veggies.map((item) => item.id);
+let vegName = veggies.map((item) => item.name);
+let vegValue = veggies.map((item) => item.value);
 
 
 
