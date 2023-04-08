@@ -112,9 +112,36 @@ size function will determine cost of pizza based on string
 ## Code:
 let testPizza  = new Pizza("small")
 ## Expected Output:
-testPizza {size:small, price: 10}
+testPizza; Pizza {size:small, price: 10}
 
 ## Test:
+test will add function to determine style and add cost if style add to price
+## Code:
+let testPizza  = new Pizza("small", "thin-crust")
+## Expected Output:
+testPizza; Pizza {size:"small", style:"thin-crust", price: 11}
+
+
+## Test:
+## Code:
+## Expected Output:
+
+
+## Test:
+## Code:
+## Expected Output:
+
+
+## Test:
+## Code:
+## Expected Output:
+
+
+
+
+
+
+
 
 
 <!-- ## Test:
