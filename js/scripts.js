@@ -55,25 +55,29 @@
 // let sideValue = sides.map((item) => item.value);
 
 function Pizza(size, style, sauce, meatTop, vegTop, side, deliveryOption) {
-this.size = this.chooseSize(size);
+this.size = size;
 //this.style = this.chooseStyle(style);
 //this.sauce = this.chooseSauce(sauce);
 //this.meatTop = this.chooseMeat(meatTop);
 //this.vegTop = this.chooseVeg(vegTop);
 //this.side = this.chooseSide(side);
-this.price = 0;
+this.price = this.chooseSize(size);
 //this.deliveryOption = deliveryOption
 }
 
-Pizza.prototype.chooseSize = function(size) {
+Pizza.prototype.chooseSize = function() {
   if (this.size === "small") {
     this.price = 10;
-  } else if (this.size === "medium") {
+  } 
+  else if (this.size === "medium") {
     this.price = 13
-  } else {
+  } 
+  else {
     this.price = 16
-  } return this.price;
+  } 
+return this.price;
 }
+let testPizza = new Pizza("small");
 
 Pizza.prototype.chooseStyle = function(style) {
   return styles[style];
@@ -106,7 +110,7 @@ Pizza.prototype.addCost = function(deliveryOption){
   }
 }
  
-let testPizza = new Pizza(0, 1, 1, 1 , 1, 1, 1);
+
 
 //Business Logic for Delivery
 
