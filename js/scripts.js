@@ -34,7 +34,7 @@ const meats = [
 ]
 let meatID = meats.map((item) => item.id);
 let meatName = meats.map((item) => item.name);
-let meatValue = meats.map((item) => item.vlaue);
+let meatValue = meats.map((item) => item.value);
 
 const veggies = [
   {id: 0, name: "none", value: 0},
@@ -90,12 +90,15 @@ Pizza.prototype.cost = function(){
   return pizzaPrice 
 }
  
-let testPizza = new Pizza(0, 1, 1, 1, 1, 1);
+let testPizza = new Pizza(0, 1, 1, [1, 2], 1, 1);
 
 //Business Logic for Delivery
 
-//function Delivery(nickname, address, totPrice, timeEst){
+function Delivery(nickname, address, totalPrice, timeEst){
   this.nickname = nickname;
-
-//}
+  this.address = address;
+  this.totalPrice = totalPrice;
+  this.timeEst = timeEst;
+}
+let testOrder = new Delivery("jeff", "77 E Grand", "25", "30 min");
 

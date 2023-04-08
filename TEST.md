@@ -105,7 +105,7 @@ sides["none", "pepsi", "ranch-dressing"]
 ## Expected Output:
 testPizza; Pizza {side: id:0, name: "Pepsi", value: 1} 
 
-## Test:
+<!-- ## Test:
 Should allow to specify multiple types of meat topping or other toppings from array of options for new Pizza Object
 ## Code:
 let testPizza = new Pizza(0, 0, 0, [1, 2],0, 0);
@@ -119,9 +119,10 @@ Delivery()
 ## Test 1:
 Will give properties for delivery info when given strings for properties in input
 ## Code:
-let testPizza = new Pizza("large", "deep-dish", "red-sauce", "pepperoni", "olive")
+let testOrder = new Delivery("jeff", "77 E Grand", "25", "30 min");
 ## Expected Output:
->testPizza; {size: "large", style: "deep-dish, sauce: "red-sauce", meatTop: "pepperoni, vegTop: "olive"}
+testOrder;
+Delivery {nickname: 'jeff', address: '77 E Grand', totalPrice: '25', timeEst: '30 min'}
 
 ## Test:
 
