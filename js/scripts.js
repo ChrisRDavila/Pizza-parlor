@@ -88,15 +88,15 @@ Pizza.prototype.chooseSide = function(side) {
 }
 Pizza.prototype.cost = function(){
   let pizzaPrice = this.size.value + this.style.value + this.sauce.value + this.meatTop.value + this.vegTop.value + this.side.value;
-  return pizzaPrice 
+  return this.pizzaPrice 
 }
-// Pizza.prototype.addCost = function(){
-//   if(this.deliveryOption === true) {
-//     //remove.hidden
-//     pizzaPrice.value += 5;
-//   }
-//   return pizzaPrice
-// }
+Pizza.prototype.addCost = function(){
+  if(this.delivery === true) {
+    //remove.hidden
+    pizzaPrice += 5;
+  }
+  return this.pizzaPrice
+}
  
 let testPizza = new Pizza(0, 1, 1, 1 , 1, 1, true);
 
