@@ -45,15 +45,24 @@ let vegID = veggies.map((item) => item.id);
 let vegName = veggies.map((item) => item.name);
 let vegValue = veggies.map((item) => item.value);
 
+const sides = [
+  {id: 0, name: "none", value: 0},
+  {id: 1, name: "Pepsi", value: 1},
+  {id: 2, name: "ranch-dressing", value: 1}
+]
+let sideID = sides.map((item) => item.id);
+let sideName = sides.map((item) => item.name);
+let sideValue = sides.map((item) => item.value);
 
 
-function Pizza(size, style, sauce, meatTop, vegTop, sides, price) {
+
+function Pizza(size, style, sauce, meatTop, vegTop, side, price) {
 this.size = this.chooseSize(size);
 this.style = this.chooseStyle(style);
 this.sauce = this.chooseSauce(sauce);
 this.meatTop = this.chooseMeat(meatTop);
 this.vegTop = this.chooseVeg(vegTop);
-//this.sides = this.chooseSide(sides);
+this.side = this.chooseSide(side);
 this.price = this.cost(price);
 }
 
@@ -74,12 +83,15 @@ Pizza.prototype.chooseMeat = function(meatTop) {
 Pizza.prototype.chooseVeg = function(vegTop) {
   return veggies[vegTop];
 }
+Pizza.prototype.chooseSide = function(side) {
+  return sides[side];
+}
 Pizza.prototype.cost = function(){
-  let pizzaPrice = this.size.value + this.style.value + this.sauce.value + this.meatTop.value + this.vegTop.value;
+  let pizzaPrice = this.size.value + this.style.value + this.sauce.value + this.meatTop.value + this.vegTop.value + this.side.value;
   return pizzaPrice 
 }
  
-let testPizza = new Pizza(0, 1, 1, 1, 1);
+let testPizza = new Pizza(0, 1, 1, 1, 1, 1);
 
 //Business Logic for Delivery
 
