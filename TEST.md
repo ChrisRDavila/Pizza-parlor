@@ -157,33 +157,6 @@ test Pizza; Pizza {.....sides:["soda", "brownie"], delivery: true,  price: "21.0
 ## Code:
 ## Expected Output:
 
-
-
-
-
-
-
-
-
-<!-- ## Test:
-Should allow to specify multiple types of meat topping or other toppings from array of options for new Pizza Object
-## Code:
-let testPizza = new Pizza(0, 0, 0, [1, 2],0, 0);
-suaceType["none", "pepperoni", "sausage"]
-## Expected Output:
-Pizza {size:small, style:regular, sauce:red, meatTop:sausage, pepperoni...}-->
-
-<!-- ## Describe
-Delivery()
-
-## Test 1:
-Will give properties for delivery info when given strings for properties in input
-## Code:
-let testOrder = new Delivery("jeff", "77 E Grand", "25", "30 min");
-## Expected Output:
-testOrder;
-Delivery {nickname: 'jeff', address: '77 E Grand', totalPrice: '25', timeEst: '30 min'} -->
-
 ## Test:
 ## Code:
 ## Expected Output:
