@@ -12,32 +12,105 @@
   <h1>Davioli's Apizza Parlor</h1>
   <p>1234 NS Portland St.  Portland, OR 99999</p>
   <h2>Menu:</h2>
-  <label for="size">Choose Pizza Size:</label>
+  <form id ="pizza-form">
+    <div id="size-selection">
+      <label for="size">Choose Pizza Size:</label>
 
-  <select name="sizes" id="size">
-    <option value="">--choose a size--</option>
-    <option value="small">Small: 10$</option>
-    <option value="medium">Medium: 13$</option>
-    <option value="large">Large: 16$</option>
-  </select>
-  <label for="style">Choose a Pizza style:</label>
+      <select name="sizes" id="size">
+        <option value="">--choose a size--</option>
+        <option value="small">Small: 10$</option>
+        <option value="medium">Medium: 13$</option>
+        <option value="large">Large: 16$</option>
+      </select>
+    </div>
+    <div id="style-selection">
+      <label for="style">Choose a Pizza style:</label>
+  
+      <select name="styles" id="style">
+        <option value="">---choose a style---</option>
+        <option value="regular/pan">Regular Pan Pizza</option>
+        <option value="deep-dish">Deep Dish</option>
+        <option value="thin-crust">Thin Crust</option>
+      </select>
+    </div>
+    <div id="sauce-selection">
+      <label for="sauces">Choose a Sauce:</label>
 
-  <select name="styles" id="style">
-    <option value="">---choose a style---</option>
-    <option value="regular/pan">Regular Pan Pizza</option>
-    <option value="deep-dish">Deep Dish</option>
-    <option value="thin-crust">Thin Crust</option>
-  </select>
-  <label for="sauces">Choose a Sauce:</label>
-
-  <select names="sauces" id="sauce">
-    <option value="">--choose a sauce--</option>
-    <option value="red">Red Sauce</option>
-    <option value="white">White Sauce</option>
-    <option value="bbq">BBQ sauce</option>
-  </select>
-  <h3>Toppings:</h3>
-  <p>each topping adds an additional 2$ to order</p>
+      <select names="sauces" id="sauce">
+        <option value="">--choose a sauce--</option>
+        <option value="red">Red Sauce</option>
+        <option value="white">White Sauce</option>
+        <option value="bbq">BBQ sauce</option>
+      </select>
+    </div>
+    <h3>Toppings:</h3>
+    <p>Select as many as desired. Each topping adds 2$ to your order.</p>
+    <div id="top-selection">
+ 
+      <input type="checkbox" name="topping-item" value="pepperoni" id="pepperoni">
+      <label for="pepperoni">pepperoni</label><br />
+      <input type="checkbox" name="topping-item" value="sausage" id="sausage">
+      <label for="sausage">sausage</label><br />
+      <input type="checkbox" name="topping-item" value="bacon" id="bacon">
+      <label for="bacon">bacon</label><br />
+      <input type="checkbox" name="topping-item" value="chicken" id="chicken">
+      <label for="chicken">chicken</label><br />
+      <input type="checkbox" name="topping-item" value="steak" id="steak">
+      <label for="steak">steak</label><br />
+      <input type="checkbox" name="topping-item" value="anchovies" id="anchovies">
+      <label for="anchovies">anchovies</label><br />
+      <input type="checkbox" name="topping-item" value="ham" id="ham">
+      <label for="ham">ham</label><br />
+      <input type="checkbox" name="topping-item" value="spinach" id="spinach" >
+      <label for="spinach" >spinach</label><br />
+      <input type="checkbox" name="topping-item" value="extra-cheese" id="extra-cheese">
+      <label for="extra-cheese">extra cheese</label><br />
+      <input type="checkbox" name="topping-item" value="mushrooms" id="mushrooms"">
+      <label for="mushrooms">mushrooms</label><br />
+      <input type="checkbox" name="topping-item" value="bell-pepper" id="bell-pepper">
+      <label for="bell-pepper">bell pepper</label><br />
+      <input type="checkbox" name="topping-item" value="olive" id="olive">
+      <label for="olive">olive</label><br />
+      <input type="checkbox" name="topping-item" value="onion" id="onion">
+      <label for="onion">onion</label><br />
+      <button type="submit">Your items</button>
+  </div>
+  <h3>Sides:</h3>
+  <p>Select as many as desired. Each side item adds 1$ to your order.</p>  
+  <div id="side-selection">
+ 
+    <input type="checkbox" name="side-item" value="cola" id="cola"  
+    <label for="cola" >Ross Cola</label><br />
+    <input type="checkbox" name="side-item" value="knot" id="knot">
+    <label for="knot">Individual Garlic Knot</label><br />
+    <input type="checkbox" name="side-item" value="jalepenos" id="jalepenos">
+    <label for="jalepenos">Jelepeños</label><br />
+    <input type="checkbox" name="side-item"" value="buffalo-wing" id="buffalo-wing">
+    <label for="buffalo-wing">Individual Buffalo Wing</label><br />
+    <input type="checkbox" name="side-item" value="water" id="water">
+    <label for="water">Portland Springs Bottled Water</label><br />
+    <input type="checkbox" name="side-item" value="chocolate-brownie" id="chocolate-brownie">
+    <label for="chocolate-brownie">Chocolate Brownie</label><br />
+    <input type="checkbox" name="side-item" value="ranch-dressing" id="ranch-dressing" >
+    <label for="ranch-dressing" >Ranch Dressing</label><br />
+  </div>
+    <h3>Dining Options</h3>
+    <p>We deliver for an additional 5$ charge</p>
+  <div id="delivery-selection">
+    <fieldset>
+      <legend>Need Delivery?</legend>
+      <input type="radio" id="no-delivery" name="delivery" value="false">
+      <label for="no-delivery">You come to us</label><br>
+      <input type="radio" id="yes-delivery" name="delivery" value="true">
+      <label for="yes-delivery">We come to you</label><br> 
+    </fieldset>
+  </div>
+  <div id="delivery-input" class="hidden">
+    <p>please let us know to whom and to where we are delivering your pizza</p>
+    
+  </div>
+  </form>
+  
 
 
 

@@ -16,7 +16,7 @@ Pizza.prototype.getCost = function() {
   if (this.size === "medium") {
     cost += 3;
   } else if (this.size === "large") {
-    cost += 6
+    cost += 6;
   } 
   cost += this.toppings.length * 2;
   cost += this.sides.length;
