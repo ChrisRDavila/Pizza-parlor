@@ -1,3 +1,25 @@
 .hidden {
   display: none;
 }
+.header {
+  color: ivory;
+  background-color: forestgreen;
+  padding: 5px;
+  border: 5px;
+  margin: 5px;
+}
+#pizza-form {
+  background-color: orangered;
+  color: azure;
+}
+.dropdown {
+  border-color: transparent;
+  background-color: bisque;
+  color: brown;
+}
+h3 {
+  color: darkblue;
+}
+img {
+  float: right ;
+}  
