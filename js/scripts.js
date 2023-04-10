@@ -8,7 +8,6 @@ this.toppings = toppings;
 this.sides = sides;
 this.delivery = delivery
 this.price = this.getCost();
-delivery = Boolean
 }
 Pizza.prototype.getCost = function() {
   let cost = 10;
@@ -17,13 +16,12 @@ Pizza.prototype.getCost = function() {
   } else if (this.size === "large") {
     cost += 6;
   } 
-  //this.toppings = [];
   cost += this.toppings.length * 2;
-  //this.sides = [];
   cost += this.sides.length;
-  //remove hidden class for delivery
-  if(this.delivery) {
-    cost += 5
+  if(this.delivery = true) {
+    cost += 5;
+  } else {
+    cost += 0;
   }
   return `$${cost}.00`;
 }
@@ -47,9 +45,9 @@ function handleFormSubmission(event) {
   for (i = 0; i < sideOptions.length; i ++) {
       selectedSides.push(sideOptions[i].value);
     }  
-  const inputtedDelivery = document.querySelector("#yes-delivery:checked").value;
+  const inputtedDelivery = document.querySelector("#yes-delivery:checked").value === true;
   let pizza = new Pizza(inputtedSize, inputtedStyle, inputtedSauce, selectedToppings, selectedSides, inputtedDelivery);
-  if (inputtedDelivery.value === true) {
+  if (inputtedDelivery === true) {
     document.getElementById("delivery-input").style.visibility = "visible";;
   }
   displayNewOrder(pizza);   
