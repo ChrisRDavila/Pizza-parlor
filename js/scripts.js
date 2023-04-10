@@ -40,9 +40,9 @@ Pizza.prototype.getCost = function() {
   } else if (this.size === "large") {
     cost += 6;
   } 
-  this.toppings = [];
+  //this.toppings = [];
   cost += this.toppings.length * 2;
-  this.sides = [];
+  //this.sides = [];
   cost += this.sides.length;
   //remove hidden class for delivery
   if(this.delivery) {
@@ -56,41 +56,42 @@ Pizza.prototype.getCost = function() {
 
 function handleFormSubmission(event) {
   event.preventDefault();
+  document.getElementById("order-info").style.visibility = "visible";
   const inputtedSize = document.querySelector("#size").value;
   const inputtedStyle = document.querySelector("#style").value;
   const inputtedSauce = document.querySelector("#sauce").value;
-  const toppingOptions = document.querySelectorAll(".top-class:checked")
+  const toppingOptions = document.querySelectorAll(".top-class:checked");
   const selectedToppings =[];
-  for (i = 0; i <= toppingOptions.length; i ++) {
-      selectedToppings.push(toppingOptions);
+  for (i = 0; i < toppingOptions.length; i ++) {
+      selectedToppings.push((toppingOptions.value));
     }
   const sideOptions = document.querySelectorAll(".side-class:checked");
   const selectedSides = [];
   for (i = 0; i < sideOptions.length; i ++) {
-      selectedSides.push(sideOptions);
-    }
-  const inputtedDelivery = document.querySelector("#yes-delivery").value;
-  let pizza = new Pizza(inputtedSize, inputtedStyle, inputtedSauce, selectedToppings, selectedSides, inputtedDelivery);
-  displayNewOrder(pizza);
-  if (inputtedDelivery === true) {
-    document.querySelector("#delivery-info").removeAttribute("class");
+      selectedSides.push(sideOptions.value);
     }  
+  const inputtedDelivery = document.querySelector("#yes-delivery").value;
+  let pizza = new Pizza(inputtedSize, inputtedStyle, inputtedSauce, toppingOptions, sideOptions, inputtedDelivery);
+  if (inputtedDelivery === true) {
+    document.getElementById("delivery-input").style.visibility = "visible";;
+  }
+  displayNewOrder(pizza);   
 }
-// function displayNewOrder(pizza) {
-//   document.querySelector(".order-size").innerText = pizza.size;
-//   document.querySelector(".order-style").innerText = pizza.style;
-//   document.querySelector(".order-sauce").innerText = pizza.sauce;
-//   document.querySelector(".order-toppings").innerText = pizza.toppings;
-//   document.querySelector(".order-sides").innerText = pizza.sides;
-//   document.querySelector(".order-price").innerText = pizza.price;
-// }
-// function displayDeliveryInfo(){
-//   document.querySelector("#delivery-submit").addEventListener("submit", displayNewOrder)
-//   let deliveryName = document.querySelector("#delivery-name-input").value;
-//   let deliveryAddress = document.querySelector("#delivery-address-input").value;
-//   document.querySelector("delivery-name").innerText = deliveryName;
-//   document.querySelector("delviery-address").innerText = deliveryAddress;
-// }
+function displayNewOrder(pizza) {
+  document.querySelector(".order-size").innerText = pizza.size;
+  document.querySelector(".order-style").innerText = pizza.style;
+  document.querySelector(".order-sauce").innerText = pizza.sauce;
+  document.querySelector(".order-toppings").innerText = pizza.toppings;
+  document.querySelector(".order-sides").innerText = pizza.sides;
+  document.querySelector(".order-price").innerText = pizza.price;
+}
+function displayDeliveryInfo(){
+  document.querySelector("#delivery-submit").addEventListener("submit", displayNewOrder)
+  let deliveryName = document.querySelector("#delivery-name-input").value;
+  let deliveryAddress = document.querySelector("#delivery-address-input").value;
+  document.querySelector("delivery-name").innerText = deliveryName;
+  document.querySelector("delviery-address").innerText = deliveryAddress;
+}
 
 window.addEventListener("load", function(){
   document.querySelector("form#pizza-form").addEventListener("submit", handleFormSubmission);

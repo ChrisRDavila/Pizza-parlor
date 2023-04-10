@@ -107,17 +107,17 @@
       </fieldset>
       <button type="submit">Your Selections</button>
     </div>
-    <div id="delivery-input" class="hidden">
+    <div id="delivery-input" name="delivery-input" style.visibility="hidden" >
       <p>please let us know to whom and to where we are delivering your pizza</p>
       <p>We operate within a five mile radius of our location</p>
       <label for="name">Name:</label>
       <input id="delivery-name-input" type="text">
       <label for="address">Address:</label>
       <input id="delivery-address-input" type="text">
+      <button  id ="delivery-submit" type="submit">Your Selections</button>
     </div>
-    <button  id ="delivery-submit" type="submit" class="hidden">Your Selections</button>
   </form>
-  <div id="order-info" class="hidden">
+  <div id="order-info" name= "order-info" style="visibility: hidden;" >
     <h3>Order Information</h3>
     <p>Size: <span class="order-size"></span></p>    
     <p>Style: <span class="order-style"></span></p>
@@ -127,7 +127,7 @@
     <p>Price: <span class="order-price"></span></p>
     <p>We are cash only, please have payment ready on pickup/takeout</p>
   </div>
-  <div id="delivery-info" class="hidden">
+  <div id="delivery-info" name="order-info" style="visibility: hidden">
     <h3>Delivery Information</h3>
     <p>please verify that input information is correct</p>
     <p>Name: <span class="delivery-name"></span></p>
