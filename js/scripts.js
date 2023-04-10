@@ -61,23 +61,16 @@ function handleFormSubmission(event) {
   const inputtedSauce = document.querySelector("#sauce").value;
   const toppingOptions = document.querySelectorAll(".top-class:checked")
   const selectedToppings =[];
-  //let toppingsArray = []
-  //("input:checkbox[name=topping-item]:checked").each(function(){
-  //  toppingsArray.push($(this).val());
-  //});
   for (i = 0; i <= toppingOptions.length; i ++) {
-    //if(toppingOptions[i].value === "checked") {
       selectedToppings.push(toppingOptions);
     }
-  }
-  // const inputtedSides = document.querySelectorAll(".side-class");
-  // const selectedSides = [];
-  // for (i = 0; i < inputtedSides.length; i ++)
-  //   if(inputtedSides[i].value==="checked");{
-  //     selectedSides.push("stringvalueofsidesstring")
-  //   }
+  const sideOptions = document.querySelectorAll(".side-class:checked");
+  const selectedSides = [];
+  for (i = 0; i < sideOptions.length; i ++) {
+      selectedSides.push(sideOptions);
+    }
   const inputtedDelivery = document.querySelector("#yes-delivery").value;
-  let pizza = new Pizza(inputtedSize, inputtedStyle, inputtedSauce, toppingsArray, selectedSides, inputtedDelivery);
+  let pizza = new Pizza(inputtedSize, inputtedStyle, inputtedSauce, selectedToppings, selectedSides, inputtedDelivery);
   displayNewOrder(pizza);
   if (inputtedDelivery === true) {
     document.querySelector("#delivery-info").removeAttribute("class");
