@@ -31,8 +31,8 @@ This project is to create a webpage that allows the user to design a pizza by se
 
 ## Known Bugs
 
-* No delivery will not show price
-* need to still work out landing information from delivery input and event targeting second submit
+* not choosing a selection will result in undefined value
+* delviery information input shows up if choose delivery for non-delivery
 
 
 ## License

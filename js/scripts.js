@@ -47,10 +47,10 @@ function handleFormSubmission(event) {
     }  
   const inputtedDelivery = document.querySelector("#delivery-response:checked").value;
   let pizza = new Pizza(inputtedSize, inputtedStyle, inputtedSauce, selectedToppings, selectedSides, inputtedDelivery);
-  // if (inputtedDelivery) {
-  //   document.getElementById("delivery-input").style.visibility = "visible";;
-  //}
-  displayNewOrder(pizza);   
+    if (inputtedDelivery) {
+    document.getElementById("delivery-input").style.visibility = "visible";;
+  }
+  displayNewOrder(pizza);
 }
 function displayNewOrder(pizza) {
   document.querySelector(".order-size").innerText = pizza.size;
@@ -60,10 +60,11 @@ function displayNewOrder(pizza) {
   document.querySelector(".order-sides").innerText = pizza.sides;
   document.querySelector(".order-price").innerText = pizza.price;
 }
-function displayDeliveryInfo(){
-  document.querySelector("#delivery-submit").addEventListener("submit", displayNewOrder)
-  let deliveryName = document.querySelector("#delivery-name-input").value;
-  let deliveryAddress = document.querySelector("#delivery-address-input").value;
+function displayDeliveryInfo(event){
+  document.querySelector("delivery-submit").addEventListener("submit", event);
+  document.getElementById("#delivery-info").style.visibility = "visible";
+  let deliveryName = document.querySelector("delivery-name-input").value;
+  let deliveryAddress = document.querySelector("#elivery-address-input").value;
   document.querySelector("delivery-name").innerText = deliveryName;
   document.querySelector("delviery-address").innerText = deliveryAddress;
 }
