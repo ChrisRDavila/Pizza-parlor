@@ -51,6 +51,11 @@ function handleFormSubmission(event) {
     document.getElementById("delivery-input").style.visibility = "visible";;
   }
   displayNewOrder(pizza);
+  document.getElementById("delivery-info").style.visibility = "visible";
+  let deliveryName = document.querySelector("#delivery-name-input").value;
+  let deliveryAddress = document.querySelector("#.delivery-address-input").value;
+  document.querySelector(".delivery-name").innerText = deliveryName.value;
+  document.querySelector(".delviery-address").innerText = deliveryAddress.value;
 }
 function displayNewOrder(pizza) {
   document.querySelector(".order-size").innerText = pizza.size;
@@ -60,15 +65,6 @@ function displayNewOrder(pizza) {
   document.querySelector(".order-sides").innerText = pizza.sides;
   document.querySelector(".order-price").innerText = pizza.price;
 }
-function displayDeliveryInfo(event){
-  document.querySelector("delivery-submit").addEventListener("submit", event);
-  document.getElementById("#delivery-info").style.visibility = "visible";
-  let deliveryName = document.querySelector("delivery-name-input").value;
-  let deliveryAddress = document.querySelector("#elivery-address-input").value;
-  document.querySelector("delivery-name").innerText = deliveryName;
-  document.querySelector("delviery-address").innerText = deliveryAddress;
-}
-
 window.addEventListener("load", function(){
   document.querySelector("form#pizza-form").addEventListener("submit", handleFormSubmission);
 });
