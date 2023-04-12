@@ -23,3 +23,21 @@ h3 {
 img {
   float: right ;
 }  
+#order-info {
+  border: 10px;
+  margin: 5px;
+  padding: 7px;
+  font-weight: bold;
+  text-align: center;
+  color: blue;
+  background-color: yellow;
+}
+#delivery-info {
+  border: 10px;
+  margin: 5px;
+  padding: 7px;
+  font-weight: bold;
+  color: rgb(13, 0, 255);
+  text-align: center;
+  background-color: darksalmon;
+}

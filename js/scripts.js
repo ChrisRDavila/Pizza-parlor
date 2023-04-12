@@ -53,9 +53,9 @@ function handleFormSubmission(event) {
   displayNewOrder(pizza);
   document.getElementById("delivery-info").style.visibility = "visible";
   let deliveryName = document.querySelector("#delivery-name-input").value;
-  let deliveryAddress = document.querySelector("#.delivery-address-input").value;
-  document.querySelector(".delivery-name").innerText = deliveryName.value;
-  document.querySelector(".delviery-address").innerText = deliveryAddress.value;
+  let deliveryAddress = document.querySelector("#delivery-address-input").value;
+  document.querySelector(".delivery-name").innerText = deliveryName;
+  document.querySelector(".delivery-address").innerText = deliveryAddress;
 }
 function displayNewOrder(pizza) {
   document.querySelector(".order-size").innerText = pizza.size;
