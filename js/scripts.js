@@ -35,18 +35,18 @@ function handleFormSubmission(event) {
   const inputtedSauce = document.querySelector("#sauce").value;
   const toppingOptions = document.querySelectorAll(".top-class:checked");
   const selectedToppings =[];
-  for (i = 0; i < toppingOptions.length; i ++) {
+  for (let i = 0; i < toppingOptions.length; i ++) {
       selectedToppings.push((toppingOptions[i].value));
     }
   const sideOptions = document.querySelectorAll(".side-class:checked");
   const selectedSides = [];
-  for (i = 0; i < sideOptions.length; i ++) {
+  for (let i = 0; i < sideOptions.length; i ++) {
       selectedSides.push(sideOptions[i].value);
     }  
   const inputtedDelivery = document.querySelector("#delivery-response:checked").value;
   let pizza = new Pizza(inputtedSize, inputtedStyle, inputtedSauce, selectedToppings, selectedSides, inputtedDelivery);
     if (inputtedDelivery) {
-    document.getElementById("delivery-input").style.visibility = "visible";;
+    document.getElementById("delivery-input").style.visibility = "visible";
   }
   displayNewOrder(pizza);
   document.getElementById("delivery-info").style.visibility = "visible";
