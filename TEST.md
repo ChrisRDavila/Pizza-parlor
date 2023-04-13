@@ -217,6 +217,14 @@ let testPizza = new Pizza("small",["soda", "brownie"])
 const cost = testPizza.getCost():
 ## Expected Output:
 testPizza; {size: "small" side: ["soda", "brownie"], price: 12}
+
+## Test:
+Will add 5 dollars to price if delivery added
+## Code:
+let testPizza = new Pizza("small", "yes")
+const cost = testPizza.getCost():
+## Expected Output:
+testPizza; {size: "small" delivery :"yes", price: 15}
 ## Test:
 ## Code:
 ## Expected Output:
