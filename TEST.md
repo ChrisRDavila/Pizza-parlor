@@ -203,6 +203,14 @@ const cost = testPizza.getCost():
 testPizza; {size: "small" topping:"olive", price: 12}
 
 ## Test:
+Will add 2 dollars to price per topping
+## Code:
+let testPizza = new Pizza("small",["olive", "pepperoni"])
+const cost = testPizza.getCost():
+## Expected Output:
+testPizza; {size: "small" topping:["olive", "pepperoni"], price: 14}
+
+## Test:
 ## Code:
 ## Expected Output:
 
