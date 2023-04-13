@@ -163,9 +163,17 @@ Will build Pizza object with correct properties and price set at 10$ to start fo
 let testPizza = new Pizza("large", "deep-dish", "red-sauce", "pepperoni", "olive", "deliver")
 ## Expected Output:
 testPizza; {size: "large", style: "deep-dish, sauce: "red-sauce", meatTop: "pepperoni, vegTop: "olive", "deliver, price: 10, }
+
+## Describe
+
+Pizza.prototype.getCost()
+
 ## Test:
+Will add 3 dollar to price if medium chosen
 ## Code:
+let testPizza = new Pizza("large")
 ## Expected Output:
+testPizza; {size:medium, price: 13}
 
 ## Test:
 ## Code:
