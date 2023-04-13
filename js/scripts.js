@@ -12,8 +12,8 @@ this.price = 0;
 Pizza.prototype.getCost = function() {
   if (this.size === "small") {
     this.price = this.price + 10;
-  // } else if (this.size === "medium") {
-  //   this.price = this.price + 13;
+  } else if (this.size === "medium") {
+    this.price = this.price + 13;
   } else {
     // this.price = this.price + 16;
   } return this.price;
