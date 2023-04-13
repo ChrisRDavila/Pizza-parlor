@@ -20,7 +20,7 @@
     <div id="size-selection">
       <label for="size">Choose Pizza Size:</label>
 
-      <select class="dropdown" name="sizes" id="size">
+      <select class="dropdown" name="sizes" id="size" required>
         <option value="">--choose a size--</option>
         <option value="small">Small: 10$</option>
         <option value="medium">Medium: 13$</option>
@@ -30,7 +30,7 @@
     <div id="style-selection">
       <label for="style">Choose Pizza style:</label>
   
-      <select class="dropdown" name="styles" id="style">
+      <select class="dropdown" name="styles" id="style" required>
         <option value="">---choose a style---</option>
         <option value="regular/pan">Regular Pan Pizza</option>
         <option value="deep-dish">Deep Dish</option>
@@ -40,7 +40,7 @@
     <div id="sauce-selection">
       <label for="sauces">Choose a Sauce:</label>
 
-      <select class="dropdown" names="sauces" id="sauce">
+      <select class="dropdown" names="sauces" id="sauce" required>
         <option value="">--choose a sauce--</option>
         <option value="red">Red Sauce</option>
         <option value="white">White Sauce</option>
@@ -110,9 +110,9 @@
       <p>please add name and address information for delivery and mail in coupons</p>
       <p>We deliver within a five mile radius of our location</p>
       <label for="name">Name:</label>
-      <input id="delivery-name-input" type="text">
+      <input id="delivery-name-input" type="text" required>
       <label for="address">Address:</label>
-      <input id="delivery-address-input" type="text">
+      <input id="delivery-address-input" type="text" required>
     </div>
     <button type="submit">Your Selections</button>
   </form>
