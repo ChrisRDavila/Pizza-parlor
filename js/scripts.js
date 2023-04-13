@@ -19,11 +19,11 @@ Pizza.prototype.getCost = function() {
   } 
   this.price += this.toppings.length * 2;
   this.price += this.sides.length;
-  // if(this.delivery === "yes") {
-  //   this.price += 5;
-  // } else {
-  //   this.price += 0;
-  // } return this.price
+  if(this.delivery === "yes") {
+    this.price += 5;
+  } else {
+    this.price += 0;
+  } return this.price
 }
 //UI Logic
 
