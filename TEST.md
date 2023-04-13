@@ -174,7 +174,7 @@ Will add 10 dollars to price if small chosen
 let testPizza = new Pizza("small")
 const cost = testPizza.getCost():
 ## Expected Output:
-testPizza; {size:small, price: 10}
+testPizza; {size:"small", price: 10}
 
 
 ## Test:
@@ -183,7 +183,7 @@ Will add 13 dollars to price if medium chosen
 let testPizza = new Pizza("medium")
 const cost = testPizza.getCost():
 ## Expected Output:
-testPizza; {size:medium, price: 13}
+testPizza; {size:"medium", price: 13}
 
 
 ## Test:
@@ -192,7 +192,15 @@ Will add 16 dollars to price if large chosen
 let testPizza = new Pizza("large")
 const cost = testPizza.getCost():
 ## Expected Output:
-testPizza; {size:large, price: 16}
+testPizza; {size:"large", price: 16}
+
+## Test:
+Will add 2 dollars to price if one topping chosen
+## Code:
+let testPizza = new Pizza("small",["olive"])
+const cost = testPizza.getCost():
+## Expected Output:
+testPizza; {size: "small" topping:"olive", price: 12}
 
 ## Test:
 ## Code:
