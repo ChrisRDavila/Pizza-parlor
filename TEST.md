@@ -225,9 +225,16 @@ let testPizza = new Pizza("small", "yes")
 const cost = testPizza.getCost():
 ## Expected Output:
 testPizza; {size: "small" delivery :"yes", price: 15}
+
+Describe: Pizza()
+
 ## Test:
+will give back default price of 0
 ## Code:
+let testPizza = new Pizza("small");
 ## Expected Output:
+testPizza.price
+0
 
 
 
