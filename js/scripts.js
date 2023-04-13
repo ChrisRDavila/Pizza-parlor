@@ -2,29 +2,29 @@
 
 function Pizza(size, style, sauce, toppings, sides, delivery) {
 this.size = size;
-this.style = style;
-this.sauce = sauce;
-this.toppings = toppings;
-this.sides = sides;
-this.delivery = delivery;
-this.price = 10;
+// this.style = style;
+// this.sauce = sauce;
+// this.toppings = toppings;
+// this.sides = sides;
+// this.delivery = delivery;
+this.price = 0;
 }
 Pizza.prototype.getCost = function() {
-  if (this.size === "medium") {
-    cost += 3;
-  } else if (this.size === "large") {
-    cost += 6;
-  } 
-  cost += this.toppings.length * 2;
-  cost += this.sides.length;
-  if(this.delivery === "yes") {
-    cost += 5;
+  if (this.size === "small") {
+    this.price = this.price + 10;
+  // } else if (this.size === "medium") {
+  //   this.price = this.price + 13;
   } else {
-    cost += 0;
-  }
-  return `$${cost}.00`;
+    // this.price = this.price + 16;
+  } return this.price;
+  // cost += this.toppings.length * 2;
+  // cost += this.sides.length;
+  // if(this.delivery === "yes") {
+  //   cost += 5;
+  // } else {
+  //   cost += 0;
+  // }
 }
-
 //UI Logic
 
 function handleFormSubmission(event) {
@@ -61,7 +61,7 @@ function displayNewOrder(pizza) {
   document.querySelector(".order-sauce").innerText = pizza.sauce;
   document.querySelector(".order-toppings").innerText = pizza.toppings;
   document.querySelector(".order-sides").innerText = pizza.sides;
-  document.querySelector(".order-price").innerText = pizza.price;
+  document.querySelector(".order-price").innerText = pizza.getCost();
 }
 window.addEventListener("load", function(){
   document.querySelector("form#pizza-form").addEventListener("submit", handleFormSubmission);
