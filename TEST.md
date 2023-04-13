@@ -171,7 +171,7 @@ Pizza.prototype.getCost()
 ## Test:
 Will add 3 dollar to price if medium chosen
 ## Code:
-let testPizza = new Pizza("large")
+let testPizza = new Pizza("medium")
 ## Expected Output:
 testPizza; {size:medium, price: 13}
 
