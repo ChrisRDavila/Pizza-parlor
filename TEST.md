@@ -185,6 +185,15 @@ const cost = testPizza.getCost():
 ## Expected Output:
 testPizza; {size:medium, price: 13}
 
+
+## Test:
+Will add 16 dollars to price if large chosen
+## Code:
+let testPizza = new Pizza("large")
+const cost = testPizza.getCost():
+## Expected Output:
+testPizza; {size:large, price: 16}
+
 ## Test:
 ## Code:
 ## Expected Output:
