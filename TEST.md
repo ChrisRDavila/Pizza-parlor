@@ -172,8 +172,9 @@ Pizza.prototype.getCost()
 Will add 3 dollar to price if small chosen
 ## Code:
 let testPizza = new Pizza("small")
+const cost = testPizza.getCost():
 ## Expected Output:
-testPizza; {size:medium, price: 10}
+testPizza; {size:small, price: 10}
 
 ## Test:
 ## Code:
