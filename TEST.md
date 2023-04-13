@@ -151,12 +151,18 @@ turn output cost into cash value element
 `$${cost}.00`
 ## Expected Output:
 test Pizza; Pizza {.....sides:["soda", "brownie"], delivery: true,  price: "21.00"}
+-------------------------------------------------------
+## TDD for corrections
 
+## Desribe:
+Pizza()
 
-## Test:d
+## Test:
+Will build Pizza object with correct properties and price set at 10$ to start for small plain cheese pizza with no added toppings, sides or delivery
 ## Code:
+let testPizza = new Pizza("large", "deep-dish", "red-sauce", "pepperoni", "olive", "deliver")
 ## Expected Output:
-
+testPizza; {size: "large", style: "deep-dish, sauce: "red-sauce", meatTop: "pepperoni, vegTop: "olive", "deliver, price: 10, }
 ## Test:
 ## Code:
 ## Expected Output:
