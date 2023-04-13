@@ -174,7 +174,8 @@ Will add 10 dollars to price if small chosen
 let testPizza = new Pizza("small")
 const cost = testPizza.getCost():
 ## Expected Output:
-testPizza; {size:"small", price: 10}
+testPizza; {size:"small"}
+testPizza.price: 10
 
 
 ## Test:
@@ -183,7 +184,8 @@ Will add 13 dollars to price if medium chosen
 let testPizza = new Pizza("medium")
 const cost = testPizza.getCost():
 ## Expected Output:
-testPizza; {size:"medium", price: 13}
+testPizza; {size:"medium"}
+testPizza.price: 13
 
 
 ## Test:
@@ -192,7 +194,8 @@ Will add 16 dollars to price if large chosen
 let testPizza = new Pizza("large")
 const cost = testPizza.getCost():
 ## Expected Output:
-testPizza; {size:"large", price: 16}
+testPizza; {size:"large"}
+testPizza.price: 16
 
 ## Test:
 Will add 2 dollars to price if one topping chosen
@@ -200,7 +203,8 @@ Will add 2 dollars to price if one topping chosen
 let testPizza = new Pizza("small",["olive"])
 const cost = testPizza.getCost():
 ## Expected Output:
-testPizza; {size: "small" topping:"olive", price: 12}
+testPizza; {size: "small" topping:"olive"}
+testPizza.price: 12
 
 ## Test:
 Will add 2 dollars to price per topping
@@ -208,7 +212,8 @@ Will add 2 dollars to price per topping
 let testPizza = new Pizza("small",["olive", "pepperoni"])
 const cost = testPizza.getCost():
 ## Expected Output:
-testPizza; {size: "small" topping:["olive", "pepperoni"], price: 14}
+testPizza; {size: "small" topping:["olive", "pepperoni"]}
+testPizza.price: 14
 
 ## Test:
 Will add 1 dollars to price per side
@@ -216,7 +221,8 @@ Will add 1 dollars to price per side
 let testPizza = new Pizza("small",["soda", "brownie"])
 const cost = testPizza.getCost():
 ## Expected Output:
-testPizza; {size: "small" side: ["soda", "brownie"], price: 12}
+testPizza; {size: "small" side: ["soda", "brownie"]}
+testPizza.price: 12
 
 ## Test:
 Will add 5 dollars to price if delivery added
@@ -233,8 +239,16 @@ will give back default price of 0
 ## Code:
 let testPizza = new Pizza("small");
 ## Expected Output:
-testPizza.price
-0
+testPizza.price: 0
+
+## Test:
+Will not add 5 dollars to price if delivery not added
+## Code:
+let testPizza = new Pizza("small", "no")
+const cost = testPizza.getCost():
+## Expected Output:
+testPizza; {size: "small" delivery :"no"} 
+testPizza.price: 10
 
 
 
