@@ -169,7 +169,7 @@ testPizza; {size: "large", style: "deep-dish, sauce: "red-sauce", meatTop: "pepp
 Pizza.prototype.getCost()
 
 ## Test:
-Will add 3 dollar to price if small chosen
+Will add 10 dollars to price if small chosen
 ## Code:
 let testPizza = new Pizza("small")
 const cost = testPizza.getCost():
