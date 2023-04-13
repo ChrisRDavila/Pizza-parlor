@@ -4,8 +4,8 @@ function Pizza(size, style, sauce, toppings, sides, delivery) {
 this.size = size;
 // this.style = style;
 // this.sauce = sauce;
-this.toppings = toppings;
-// this.sides = sides;
+// this.toppings = toppings;
+this.sides = sides;
 // this.delivery = delivery;
 this.price = 0;
 }
@@ -17,8 +17,8 @@ Pizza.prototype.getCost = function() {
   } else {
     this.price = this.price + 16;
   } 
-  this.price += this.toppings.length * 2;
-  // cost += this.sides.length;
+  // this.price += this.toppings.length * 2;
+  this.price += this.sides.length;
   // if(this.delivery === "yes") {
   //   cost += 5;
   // } else {
