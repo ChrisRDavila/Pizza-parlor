@@ -15,7 +15,7 @@ Pizza.prototype.getCost = function() {
   } else if (this.size === "medium") {
     this.price = this.price + 13;
   } else {
-    // this.price = this.price + 16;
+    this.price = this.price + 16;
   } return this.price;
   // cost += this.toppings.length * 2;
   // cost += this.sides.length;
