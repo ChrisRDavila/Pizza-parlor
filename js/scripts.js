@@ -59,8 +59,8 @@ function displayNewOrder(pizza) {
   document.querySelector(".order-size").innerText = pizza.size;
   document.querySelector(".order-style").innerText = pizza.style;
   document.querySelector(".order-sauce").innerText = pizza.sauce;
-  document.querySelector(".order-toppings").innerText = pizza.toppings;
-  document.querySelector(".order-sides").innerText = pizza.sides;
+  document.querySelector(".order-toppings").innerText = pizza.toppings.join(", ");
+  document.querySelector(".order-sides").innerText = pizza.sides.join(", ");
   document.querySelector(".order-price").innerText = pizza.getCost();
 }
 window.addEventListener("load", function(){
