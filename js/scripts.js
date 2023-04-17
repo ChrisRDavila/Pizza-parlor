@@ -1,13 +1,13 @@
 //Business Logic for Pizza-----------
 
 function Pizza(size, style, sauce, toppings, sides, delivery) {
-this.size = size;
-this.style = style;
-this.sauce = sauce;
-this.toppings = toppings;
-this.sides = sides;
-this.delivery = delivery;
-this.price = 0;
+  this.size = size;
+  this.style = style;
+  this.sauce = sauce;
+  this.toppings = toppings;
+  this.sides = sides;
+  this.delivery = delivery;
+  this.price = 0;
 }
 Pizza.prototype.getCost = function() {
   if (this.size === "small") {
@@ -37,16 +37,16 @@ function handleFormSubmission(event) {
   const toppingOptions = document.querySelectorAll(".top-class:checked");
   const selectedToppings =[];
   for (let i = 0; i < toppingOptions.length; i ++) {
-      selectedToppings.push((toppingOptions[i].value));
-    }
+    selectedToppings.push((toppingOptions[i].value));
+  }
   const sideOptions = document.querySelectorAll(".side-class:checked");
   const selectedSides = [];
   for (let i = 0; i < sideOptions.length; i ++) {
-      selectedSides.push(sideOptions[i].value);
-    }  
+    selectedSides.push(sideOptions[i].value);
+  }  
   const inputtedDelivery = document.querySelector("#delivery-response:checked").value;
   let pizza = new Pizza(inputtedSize, inputtedStyle, inputtedSauce, selectedToppings, selectedSides, inputtedDelivery);
-    if (inputtedDelivery) {
+  if (inputtedDelivery) {
     document.getElementById("delivery-input").style.visibility = "visible";
   }
   displayNewOrder(pizza);
