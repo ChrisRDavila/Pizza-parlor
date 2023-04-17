@@ -24,7 +24,8 @@ Pizza.prototype.getCost = function() {
   } else {
     this.price += 0;
   } return this.price
-}//test no delivery
+}
+
 //UI Logic
 
 function handleFormSubmission(event) {

@@ -31,8 +31,10 @@ This project is to create a webpage that allows the user to design a pizza by se
 
 ## Known Bugs
 
-* not choosing a selection will result in undefined value
-* delviery information input shows up if choose delivery for non-delivery
+* asks for address whether address required or not
+* can put not a name in for name and non-address characters in for address and input will still return input
+* no cancallation option
+* just states delivery will arrive after 30 minutes despite being accessible at all times (closed restaurant)
 
 
 ## License
