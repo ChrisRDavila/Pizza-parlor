@@ -5,7 +5,7 @@ Will build properties of pizza when strings for properties are input
 ## Code:
 let testPizza = new Pizza("large", "deep-dish", "red-sauce", "pepperoni", "olive")
 ## Expected Output:
->testPizza; {size: "large", style: "deep-dish, sauce: "red-sauce", meatTop: "pepperoni, vegTop: "olive"}
+testPizza; {size: "large", style: "deep-dish, sauce: "red-sauce", meatTop: "pepperoni, vegTop: "olive"}
 
 ## Test 2:
 should specify a size for our Pizza with options as postions in an array
@@ -232,7 +232,7 @@ const cost = testPizza.getCost():
 ## Expected Output:
 testPizza; {size: "small" delivery :"yes", price: 15}
 
-Describe: Pizza()
+## Describe: Pizza()
 
 ## Test:
 will give back default price of 0
