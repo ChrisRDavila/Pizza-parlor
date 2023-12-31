@@ -16,7 +16,7 @@
 
 ## Description
 
-This project is to create a webpage that allows the user to design a pizza by selecting various properties such as size and toppings. There will be buttons that allow the Usser interface of the code to pull values so assemble a personalized pizza and return the pizza along with cost, sides and delivery options amd cost. 
+This project is to create a webpage that allows the user to design a pizza by selecting various properties such as size and toppings. There will be buttons that allow the Usser interface of the code to pull values so assemble a personalized pizza and return the pizza along with cost, sides and delivery options amd cost. Code review for section testing knowledge off arrays and looping
 
 ## Setup/Installation Requirements
 
